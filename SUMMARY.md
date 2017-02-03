@@ -8,7 +8,7 @@
   * [springframework](springcloud/springframework.md)
     * [springmvc](springcloud/springframework/springmvc.md)
       * [restful接口](springcloud/springframework/springmvc/restful.md)
-        * restful介绍
+        * [restful介绍](springcloud/springframework/springmvc/restful/restful.md)
         * [PUT请求](springcloud/springframework/springmvc/restful/put.md)
         * [POST请求](springcloud/springframework/springmvc/restful/post.md)
         * [GET请求](springcloud/springframework/springmvc/restful/get.md)
