@@ -7,6 +7,6 @@
     * [swagger工具](springcloud/api/swagger.md)
   * [springframework](springcloud/springframework.md)
     * [springmvc](springcloud/springframework/springmvc.md)
-      * restful接口
+      * [restful接口](springcloud/springframework/springmvc/restful.md)
 * [微服务数据库架构](.md)
 
