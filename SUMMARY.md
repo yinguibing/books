@@ -11,7 +11,7 @@
         * restful介绍
         * [PUT请求](springcloud/springframework/springmvc/restful/put.md)
         * [POST请求](springcloud/springframework/springmvc/restful/post.md)
-        * GET请求
+        * [GET请求](springcloud/springframework/springmvc/restful/get.md)
         * DELETE请求
         * PATCH请求
 * [微服务数据库架构](.md)
