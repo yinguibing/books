@@ -39,3 +39,41 @@ Other tools created by the Swagger Team include:
 
 springboot中swagger配置
 
+```java
+@Configuration
+@EnableSwagger2
+public class SwaggerConfig {
+
+	/**
+	 * 文档摘要
+	 * @return
+	 */
+    @Bean
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.example"))
+                .paths(PathSelectors.any())
+                .build();
+    }
+    
+    /**
+     * API文档详细信息
+     * @return
+     */
+    private ApiInfo apiInfo() {
+        return new ApiInfoBuilder()
+                .title("用户模块API文档")
+                .description("用户基础微服务的API接口说明")
+                .termsOfServiceUrl("http://blog.csdn.com/")
+                .contact(new Contact("long哥", "http://www.cnblogs.com/yinguibing/", "longge@qq.com"))
+                .version("1.0")
+                .build();
+    }
+}
+
+```
+
+
+
