@@ -37,17 +37,17 @@ Other tools created by the Swagger Team include:
         </dependency>
 ```
 
-springboot中swagger配置
+### springboot中swagger配置
 
 ```java
 @Configuration
 @EnableSwagger2
 public class SwaggerConfig {
 
-	/**
-	 * 文档摘要
-	 * @return
-	 */
+    /**
+     * 文档摘要
+     * @return
+     */
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
@@ -57,7 +57,7 @@ public class SwaggerConfig {
                 .paths(PathSelectors.any())
                 .build();
     }
-    
+
     /**
      * API文档详细信息
      * @return
@@ -72,7 +72,6 @@ public class SwaggerConfig {
                 .build();
     }
 }
-
 ```
 
 
