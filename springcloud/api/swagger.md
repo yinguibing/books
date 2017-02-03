@@ -128,9 +128,66 @@ public class PersonController {
 
 ### Swagger注解说明
 
+说明：
 
+* @Api：用在类上，说明该类的作用
+* @ApiOperation：用在方法上，说明方法的作用
+* @ApiImplicitParams：用在方法上包含一组参数说明
+* @ApiImplicitParam：用在@ApiImplicitParams注解中，指定一个请求参数的各个方面
+  * paramType：参数放在哪个地方
+    * header--
+      &gt;
+      请求参数的获取：@RequestHeader
+    * query--
+      &gt;
+      请求参数的获取：@RequestParam
+    * path（用于restful接口）--
+      &gt;
+      请求参数的获取：@PathVariable
+    * body（不常用）
+    * form（不常用）
+  * name：参数名
+  * dataType：参数类型
+  * required：参数是否必须传
+  * value：参数的意思
+  * defaultValue：参数的默认值
+* @ApiResponses：用于表示一组响应
+* @ApiResponse：用在@ApiResponses中，一般用于表达一个错误的响应信息
+  * code：数字，例如400
+  * message：信息，例如"请求参数没填好"
+  * response：抛出异常的类
+* @ApiModel：描述一个Model的信息（这种一般用在post创建的时候，使用@RequestBody这样的场景，请求参数无法使用@ApiImplicitParam注解进行描述的时候）
+  * @ApiModelProperty：描述一个model的属性
 
+以上这些就是最常用的几个注解了。
 
+需要注意的是：
+
+* ApiImplicitParam这个注解不只是注解，还会影响运行期的程序，例子如下：
+
+![](http://images2015.cnblogs.com/blog/866881/201604/866881-20160405160238047-1725111637.png)
+
+如果ApiImplicitParam中的phone的paramType是query的话，是无法注入到rest路径中的，而且如果是path的话，是不需要配置ApiImplicitParam的，即使配置了，其中的value="手机号"也不会在swagger-ui展示出来。
+
+**测试：**
+
+启动服务，浏览器输入"http://localhost:8080/swagger-ui.html"
+
+![](http://images2015.cnblogs.com/blog/866881/201604/866881-20160402194015223-1123677403.png)
+
+最上边一个红框：@Api
+
+GET红框：method=RequestMethod.GET
+
+右边红框：@ApiOperation
+
+parameter红框：@ApiImplicitParams系列注解
+
+response messages红框：@ApiResponses系列注解
+
+输入参数后，点击"try it out!"，查看响应内容：
+
+![](http://images2015.cnblogs.com/blog/866881/201604/866881-20160402194351629-832756751.png)
 
 
 
