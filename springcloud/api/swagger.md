@@ -8,7 +8,7 @@ swagger是开源的API框架，号称“是世界上最流行的”API框架。�
 | :--- | :--- |
 | [Swagger Core](https://github.com/swagger-api/swagger-core) | Java-related libraries for creating, consuming, and working with Swagger definitions |
 | [Swagger Codegen](https://github.com/swagger-api/swagger-codegen) | A code generation framework for building Client SDKs, servers, and documentation from Swagger Definitions |
-| [Swagger UI](https://github.com/swagger-api/swagger-ui) | An HTML5 based UI for exploring and interacting with a Swagger defined API |
+| [Swagger UI](https://github.com/swagger-api/swagger-ui) | 基于HTML5的网页，用于浏览swagger生成的API接口，并通过网页与接口交互。 |
 | [Swagger Editor](https://github.com/swagger-api/swagger-editor) | Browser based editor for authoring Swagger definitions using YAML |
 
 Other tools created by the Swagger Team include:
@@ -21,8 +21,6 @@ Other tools created by the Swagger Team include:
 | [Validator-Badge](https://hub.docker.com/r/swaggerapi/swagger-validator/) | Standalone web service which validates swagger definitions dynamically |
 
 # Swagger-UI与Springboot整合
-
-
 
 
 
