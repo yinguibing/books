@@ -10,7 +10,7 @@
       * [restful接口](springcloud/springframework/springmvc/restful.md)
         * restful介绍
         * PUT请求
-        * POST请求
+        * [POST请求](springcloud/springframework/springmvc/restful/post.md)
         * GET请求
         * DELETE请求
         * PATCH请求
