@@ -81,41 +81,42 @@ public class SwaggerConfig {
 @RestController
 @RequestMapping("/people")
 public class PersonController {
-	
-	Logger logger = Logger.getLogger(this.getClass().getName()) ;
 
-	@ApiOperation(value="展示所有的用户信息",notes="接口的详细描述信息",response=Person.class,responseContainer="List")
+    Logger logger = Logger.getLogger(this.getClass().getName()) ;
+
+    @ApiOperation(value="展示所有的用户信息",notes="接口的详细描述信息",response=Person.class,responseContainer="List")
    @RequestMapping(method = RequestMethod.GET)
    public List<Person> showAll() {
-	  
-	  return null ;
+
+      return null ;
    }
-	@ApiOperation(value="根据用户ID查找指定用的信息",notes="用户id不可以为空",response=Person.class)
-	@ApiImplicitParams(
-			@ApiImplicitParam(dataType="long",name="用户id")
-			)
+    @ApiOperation(value="根据用户ID查找指定用的信息",notes="用户id不可以为空",response=Person.class)
+    @ApiImplicitParams(
+            @ApiImplicitParam(dataType="long",name="用户id")
+            )
    @RequestMapping(value = "/{person}", method = RequestMethod.GET)
    public Person show(@PathVariable Long id) {
-	  
-	  return null ;
+
+      return null ;
    }
 
-	@ApiOperation(value="更新用户信息",notes="根据用户的id去更新用户的信息，更新成功返回true，更新失败返回false",response=Boolean.class)
-	@ApiImplicitParams(
-			@ApiImplicitParam(dataType="Person",name="用户信息")
-			)
-	@PutMapping(
-			value="/update"
-			)
-	public Boolean update(Person person)
-	{
-		logger.info("接受到更新用户信息请求");
-		logger.info("信息内容为:"+person.toString());
-		return true;
-	}
+    @ApiOperation(value="更新用户信息",notes="根据用户的id去更新用户的信息，更新成功返回true，更新失败返回false",response=Boolean.class)
+    @ApiImplicitParams(
+            @ApiImplicitParam(dataType="Person",name="用户信息")
+            )
+    @PutMapping(
+            value="/update"
+            )
+    public Boolean update(Person person)
+    {
+        logger.info("接受到更新用户信息请求");
+        logger.info("信息内容为:"+person.toString());
+        return true;
+    }
 }
-
 ```
+
+页面展示效果
 
 
 
