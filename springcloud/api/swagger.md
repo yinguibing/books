@@ -24,8 +24,6 @@ Other tools created by the Swagger Team include:
 
 ### maven依赖
 
-
-
 ```java
 <dependency>
 	    	<groupId>io.springfox</groupId>
@@ -36,7 +34,7 @@ Other tools created by the Swagger Team include:
 		    <groupId>io.springfox</groupId>
 		    <artifactId>springfox-swagger-ui</artifactId>
 		    <version>2.6.1</version>
-		</dependency>&lt;/dependency&gt;
+		</dependency>
 ```
 
 
