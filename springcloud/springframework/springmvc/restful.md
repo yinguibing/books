@@ -1,4 +1,4 @@
 RPC式服务时通过单个URI暴露所有的服务，内部服务不可寻址，也不可知内部服务之间的关系。REST式的服务，服务即可寻址，也是连同的。
 
-![](/assets/rpc vs rest.png)
+ ![](/assets/rpc vs rest.png)
 
