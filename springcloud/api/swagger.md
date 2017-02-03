@@ -20,7 +20,7 @@ Other tools created by the Swagger Team include:
 | [Swagger Parser](https://github.com/swagger-api/swagger-parser) | Standalone library for parsing Swagger definitions from Java |
 | [Validator-Badge](https://hub.docker.com/r/swaggerapi/swagger-validator/) | Standalone web service which validates swagger definitions dynamically |
 
-# Swagger与Springboot整合
+# Swagger-UI与Springboot整合
 
 
 
