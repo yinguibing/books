@@ -24,25 +24,20 @@ Other tools created by the Swagger Team include:
 
 ### maven依赖
 
-&lt;dependency&gt;
 
-	    	&lt;groupId&gt;io.springfox&lt;/groupId&gt;
 
-		    &lt;artifactId&gt;springfox-swagger2&lt;/artifactId&gt;
-
-		    &lt;version&gt;2.6.1&lt;/version&gt;
-
-		&lt;/dependency&gt;
-
-		&lt;dependency&gt;
-
-		    &lt;groupId&gt;io.springfox&lt;/groupId&gt;
-
-		    &lt;artifactId&gt;springfox-swagger-ui&lt;/artifactId&gt;
-
-		    &lt;version&gt;2.6.1&lt;/version&gt;
-
-		&lt;/dependency&gt;
+```java
+<dependency>
+	    	<groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>2.6.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>2.6.1</version>
+		</dependency>&lt;/dependency&gt;
+```
 
 
 
