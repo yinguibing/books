@@ -2,6 +2,7 @@
 
 * [Introduction](README.md)
 * [First Chapter](chapter1.md)
+  * 微服务数据架构
 * [springcloud技术栈](springcloud.md)
   * [API管理](springcloud/api.md)
     * [swagger工具](springcloud/api/swagger.md)
@@ -14,6 +15,4 @@
         * [GET请求](springcloud/springframework/springmvc/restful/get.md)
         * DELETE请求
         * PATCH请求
-* [微服务数据库架构.md](.md.md)
-  * [去中心化数据管理](.md/.md)
 
