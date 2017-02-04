@@ -18,4 +18,5 @@
 ## 微服务数据架构
 
 * [去中心化数据管理](.md)
+  * [qu zhongxinhua ](.md/qu-zhongxinhua.md)
 
