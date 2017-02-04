@@ -14,5 +14,6 @@
         * [GET请求](springcloud/springframework/springmvc/restful/get.md)
         * DELETE请求
         * PATCH请求
-* 微服务数据库架构.md
+* [微服务数据库架构.md](.md.md)
+  * 去中心化的数据管理.md
 
