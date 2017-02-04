@@ -15,5 +15,4 @@
         * DELETE请求
         * PATCH请求
 * [微服务数据库架构.md](.md.md)
-  * [去中心化的数据管理.md](.md/.md.md)
 
