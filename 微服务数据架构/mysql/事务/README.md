@@ -4,3 +4,5 @@ innodb提供的是非锁定读、行级锁支持，也就是说innodb的锁在�
 
 锁的实现也带来了事务的隔离问题，事务的隔离在mysql中有脏读、不可重复度和幻读。
 
+innodb中包含latch和lock两个概念，latch可以理解为一个轻量级lock。
+
