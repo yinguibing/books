@@ -4,5 +4,5 @@ lombok项目的产生就是为了省去我们手动创建getter和setter方法�
 
 ![](/assets/lombok安装提示.png)
 
-
+sts下： --vmargs --javaagent:lombok.jsr
 
