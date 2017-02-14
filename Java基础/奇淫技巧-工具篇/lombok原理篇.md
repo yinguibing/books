@@ -36,7 +36,7 @@ implementations from the fields of your object.
 
 Constructors made to order: Generates constructors that take no arguments, one argument per final / non-null field, or one argument for every field.
 
-[`@Data`](https://projectlombok.org/features/Data.html)
+[`@Data`](https://projectlombok.org/features/Data.html)：组合注解。
 
 All together now: A shortcut for
 
