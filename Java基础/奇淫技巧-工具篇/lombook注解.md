@@ -38,11 +38,27 @@ lombok项目的产生就是为了省去我们手动创建getter和setter方法�
 
 
 5.重启eclipse或myeclipse
+
+执行java -jar lombok.jar 命令后，lombok会搜索系统下所有的eclipse程序，将lombok.jar复制到eclipse安装路径，同时会修改eclipse的.ini
+配置文件，添加如下配置
+-vmargs
+-Dosgi.requiredJavaVersion=1.8
+-Xms40m
+-Dosgi.module.lock.timeout=10
+-Xverify:none
+-Dorg.eclipse.swt.browser.IEVersion=10001
+-Xmx1200m
+-javaagent:lombok.jar
+
 ```
 
 ![](/assets/lombok安装提示.png)
 
-sts下： 
+
+
+
+
+sts下：
 
 -vmargs
 
