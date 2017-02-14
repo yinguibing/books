@@ -18,19 +18,7 @@ methods safely with no hassle.
 
 [`@Getter` / `@Setter`](https://projectlombok.org/features/GetterSetter.html)：类或者方法级注解。如果标注类上，在所有非静态属性生成get/set方法
 
-Never write
-
-`public int getFoo() {return foo;}`
-
-again.
-
 [`@ToString`](https://projectlombok.org/features/ToString.html)：  生成toString方法，默认情况下，会输出类名、所有属性，属性会按照顺序输出，以逗号分割。
-
-No need to start a debugger to see your fields: Just let lombok generate a
-
-`toString`
-
-for you!
 
 [`@EqualsAndHashCode`](https://projectlombok.org/features/EqualsAndHashCode.html)
 
