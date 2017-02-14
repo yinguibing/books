@@ -24,7 +24,7 @@ Never write
 
 again.
 
-[`@ToString`](https://projectlombok.org/features/ToString.html)
+[`@ToString`](https://projectlombok.org/features/ToString.html)：  生成toString方法，默认情况下，会输出类名、所有属性，属性会按照顺序输出，以逗号分割。
 
 No need to start a debugger to see your fields: Just let lombok generate a
 
