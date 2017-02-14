@@ -16,7 +16,7 @@ Automatic resource management: Call your
 
 methods safely with no hassle.
 
-[`@Getter` / `@Setter`](https://projectlombok.org/features/GetterSetter.html)
+[`@Getter` / `@Setter`](https://projectlombok.org/features/GetterSetter.html)：类或者方法级注解。如果标注类上，在所有非静态属性生成get/set方法
 
 Never write
 
