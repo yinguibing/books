@@ -6,3 +6,19 @@ lombok项目的产生就是为了省去我们手动创建getter和setter方法�
 
 sts下： -vmargs -javaagent:lombok.jsr
 
+-vmargs
+
+-Dosgi.requiredJavaVersion=1.8
+
+-Xms40m
+
+-Dosgi.module.lock.timeout=10
+
+-Xverify:none
+
+-Dorg.eclipse.swt.browser.IEVersion=10001
+
+-Xmx1200m
+
+-javaagent:lombok.jar
+
