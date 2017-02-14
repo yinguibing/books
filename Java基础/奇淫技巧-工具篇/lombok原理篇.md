@@ -38,27 +38,7 @@ Constructors made to order: Generates constructors that take no arguments, one a
 
 [`@Data`](https://projectlombok.org/features/Data.html)：组合注解。
 
-All together now: A shortcut for
-
-`@ToString`
-
-,
-
-`@EqualsAndHashCode`
-
-,
-
-`@Getter`
-
-on all fields, and
-
-`@Setter`
-
-on all non-final fields, and
-
-`@RequiredArgsConstructor`
-
-!
+`@ToString`,`@EqualsAndHashCode`,`@Getter，@Setter，@RequiredArgsConstructor`
 
 [`@Value`](https://projectlombok.org/features/Value.html)
 
