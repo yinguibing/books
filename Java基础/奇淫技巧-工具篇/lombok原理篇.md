@@ -1,3 +1,5 @@
+### 三、常用注解 {#h3_2}
+
 [`val`](https://projectlombok.org/features/val.html)
 
 Finally! Hassle-free final local variables.
@@ -8,39 +10,39 @@ or: How I learned to stop worrying and love the NullPointerException.
 
 [`@Cleanup`](https://projectlombok.org/features/Cleanup.html)
 
-Automatic resource management: Call your 
+Automatic resource management: Call your
 
 `close()`
 
- methods safely with no hassle.
+methods safely with no hassle.
 
 [`@Getter` / `@Setter`](https://projectlombok.org/features/GetterSetter.html)
 
-Never write 
+Never write
 
 `public int getFoo() {return foo;}`
 
- again.
+again.
 
 [`@ToString`](https://projectlombok.org/features/ToString.html)
 
-No need to start a debugger to see your fields: Just let lombok generate a 
+No need to start a debugger to see your fields: Just let lombok generate a
 
 `toString`
 
- for you!
+for you!
 
 [`@EqualsAndHashCode`](https://projectlombok.org/features/EqualsAndHashCode.html)
 
-Equality made easy: Generates 
+Equality made easy: Generates
 
 `hashCode`
 
- and 
+and
 
 `equals`
 
- implementations from the fields of your object.
+implementations from the fields of your object.
 
 [`@NoArgsConstructor`, `@RequiredArgsConstructor` and `@AllArgsConstructor`](https://projectlombok.org/features/Constructor.html)
 
@@ -48,23 +50,23 @@ Constructors made to order: Generates constructors that take no arguments, one a
 
 [`@Data`](https://projectlombok.org/features/Data.html)
 
-All together now: A shortcut for 
+All together now: A shortcut for
 
 `@ToString`
 
-, 
+,
 
 `@EqualsAndHashCode`
 
-, 
+,
 
 `@Getter`
 
- on all fields, and 
+on all fields, and
 
 `@Setter`
 
- on all non-final fields, and 
+on all non-final fields, and
 
 `@RequiredArgsConstructor`
 
@@ -86,7 +88,7 @@ To boldly throw checked exceptions where no one has thrown them before!
 
 `synchronized`
 
- done right: Don't expose your locks.
+done right: Don't expose your locks.
 
 [`@Getter(lazy=true)`](https://projectlombok.org/features/GetterLazy.html)
 
