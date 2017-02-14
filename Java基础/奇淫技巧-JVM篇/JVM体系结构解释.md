@@ -1,6 +1,6 @@
 参考：[https://www.iteblog.com/archives/1957.html?from=related](https://www.iteblog.com/archives/1957.html?from=related)
 
-　每个[Java](https://www.iteblog.com/archives/tag/java/)开发人员都知道字节码经由JRE（[Java](https://www.iteblog.com/archives/tag/java/)运行时环境）执行。但他们或许不知道JRE其实是由[Java](https://www.iteblog.com/archives/tag/java/)虚拟机（[JVM](https://www.iteblog.com/archives/tag/jvm/)）实现，[JVM](https://www.iteblog.com/archives/tag/jvm/)分析字节码，解释并执行它。作为开发人员，了解[JVM](https://www.iteblog.com/archives/tag/jvm/)的架构是非常重要的，因为它使我们能够编写出更高效的代码。本文中，我们将深入了解Java中的JVM架构和JVM的各个组件。
+每个[Java](https://www.iteblog.com/archives/tag/java/)开发人员都知道字节码经由JRE（[Java](https://www.iteblog.com/archives/tag/java/)运行时环境）执行。但他们或许不知道JRE其实是由[Java](https://www.iteblog.com/archives/tag/java/)虚拟机（[JVM](https://www.iteblog.com/archives/tag/jvm/)）实现，[JVM](https://www.iteblog.com/archives/tag/jvm/)分析字节码，解释并执行它。作为开发人员，了解[JVM](https://www.iteblog.com/archives/tag/jvm/)的架构是非常重要的，因为它使我们能够编写出更高效的代码。本文中，我们将深入了解Java中的JVM架构和JVM的各个组件。
 
 文章目录
 
@@ -12,22 +12,17 @@
 
 ## JVM
 
-　　虚拟机是物理机的软件实现。Java的设计理念是WORA（Write Once Run Anywhere，一次编写随处运行）。编译器将Java文件编译为Java .class文件，然后将.class文件输入到JVM中，JVM执行类文件的加载和执行的操作。请看以下的JVM架构图：
+虚拟机是物理机的软件实现。Java的设计理念是WORA（Write Once Run Anywhere，一次编写随处运行）。编译器将Java文件编译为Java .class文件，然后将.class文件输入到JVM中，JVM执行类文件的加载和执行的操作。请看以下的JVM架构图：
 
 [![](https://www.iteblog.com/pic/JVM-Architecture_iteblog.png "jvm architecture explained")](https://www.iteblog.com/pic/JVM-Architecture_iteblog.png)
 
-  
 
-
- 如果想及时了解Spark、Flink、Hadoop或者Hbase相关的文章，欢迎关注微信公共帐号：
-
-**iteblog\_hadoop**
 
 ## JVM是如何工作的
 
 如上面架构图所示，JVM分为三个主要子系统：
 
-　　1、类加载器子系统（Class Loader Subsystem）  
+1、类加载器子系统（Class Loader Subsystem）  
  　　2、运行时数据区（Runtime Data Area）  
  　　3、执行引擎（Execution Engine）
 
@@ -69,7 +64,7 @@ Boot Strap类加载器，Extension类加载器和Application（类加载器是�
 
 \(3\) 堆栈区（Stack Area）：对于每个线程，将创建单独的运行时堆栈。对于每个方法调用，将在堆栈存储器中产生一个条目，称为堆栈帧。所有局部变量将在堆栈内存中创建。堆栈区域是线程安全的，因为它不共享资源。堆栈框架分为三个子元素：
 
-　　a、局部变量数组（Local Variable Array）：与方法相关，涉及局部变量，并在此存储相应的值  
+a、局部变量数组（Local Variable Array）：与方法相关，涉及局部变量，并在此存储相应的值  
  　　b、操作数堆栈（Operand stack）：如果需要执行任何中间操作，操作数堆栈将充当运行时工作空间来执行操作  
  　　c、帧数据（Frame Data）：对应于方法的所有符号存储在此处。在任何异常的情况下，捕获的区块信息将被保持在帧数据中；
 
@@ -85,7 +80,7 @@ Boot Strap类加载器，Extension类加载器和Application（类加载器是�
 
 \(2\) **JIT编译器**：JIT编译器消除了解释器的缺点。执行引擎将在转换字节码时使用解释器的帮助，但是当它发现重复的代码时，将使用JIT编译器，它编译整个字节码并将其更改为本地代码。这个本地代码将直接用于重复的方法调用，这提高了系统的性能。JIT的构成组件为：
 
-　　a、**中间代码生成器（Intermediate Code Generator）**：生成中间代码  
+a、**中间代码生成器（Intermediate Code Generator）**：生成中间代码  
  　　b、**代码优化器（Code Optimizer）**：负责优化上面生成的中间代码  
  　　c、**目标代码生成器（Target Code Generator）**：负责生成机器代码或本地代码  
  　　d、**分析器（Profiler）**：一个特殊组件，负责查找热点，即该方法是否被多次调用；
@@ -95,6 +90,4 @@ Boot Strap类加载器，Extension类加载器和Application（类加载器是�
 **Java本机接口（JNI）**：JNI将与本机方法库进行交互，并提供执行引擎所需的本机库。
 
 **本地方法库（Native Method Libraries）**：它是执行引擎所需的本机库的集合。
-
-
 
