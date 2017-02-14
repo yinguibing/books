@@ -16,8 +16,6 @@
 
 [![](https://www.iteblog.com/pic/JVM-Architecture_iteblog.png "jvm architecture explained")](https://www.iteblog.com/pic/JVM-Architecture_iteblog.png)
 
-
-
 ## JVM是如何工作的
 
 如上面架构图所示，JVM分为三个主要子系统：
@@ -65,8 +63,8 @@ Boot Strap类加载器，Extension类加载器和Application（类加载器是�
 \(3\) 堆栈区（Stack Area）：对于每个线程，将创建单独的运行时堆栈。对于每个方法调用，将在堆栈存储器中产生一个条目，称为堆栈帧。所有局部变量将在堆栈内存中创建。堆栈区域是线程安全的，因为它不共享资源。堆栈框架分为三个子元素：
 
 a、局部变量数组（Local Variable Array）：与方法相关，涉及局部变量，并在此存储相应的值  
- 　　b、操作数堆栈（Operand stack）：如果需要执行任何中间操作，操作数堆栈将充当运行时工作空间来执行操作  
- 　　c、帧数据（Frame Data）：对应于方法的所有符号存储在此处。在任何异常的情况下，捕获的区块信息将被保持在帧数据中；
+b、操作数堆栈（Operand stack）：如果需要执行任何中间操作，操作数堆栈将充当运行时工作空间来执行操作  
+c、帧数据（Frame Data）：对应于方法的所有符号存储在此处。在任何异常的情况下，捕获的区块信息将被保持在帧数据中；
 
 \(4\) PC寄存器（PC Registers）：每个线程都有单独的PC寄存器，用于保存当前执行指令的地址。一旦执行指令，PC寄存器将被下一条指令更新；
 
