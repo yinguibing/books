@@ -32,7 +32,16 @@ at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createQuery\(AbstractEntityMa
 
 源代码如下
 
- @Query\("select new com.my118.model.example.ExamEntity\(ex1.id,ex1.content,ex1.type,ex2.note\) from Example1Entity ex1, Example2Entity ex2 where ex1.type=ex2.typeid and ex1.type=:qType"\)
+@Query\("select new com.my118.model.example.ExamEntity\(ex1.id,ex1.content,ex1.type,ex2.note\) from Example1Entity ex1, Example2Entity ex2 where ex1.type=ex2.typeid and ex1.type=:qType"\)
 
-    public List&lt;ExamEntity&gt; findComData\(@Param\("qType"\) String qType\);
+```java
+public List&lt;ExamEntity&gt; findComData\(@Param\("qType"\) String qType\);
+
+```
+
+
+
+类注解为：
+
+
 
