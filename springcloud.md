@@ -36,10 +36,7 @@ at org.hibernate.jpa.spi.AbstractEntityManagerImpl.createQuery\(AbstractEntityMa
 
 ```java
 public List&lt;ExamEntity&gt; findComData\(@Param\("qType"\) String qType\);
-
 ```
-
-
 
 类注解为：
 
