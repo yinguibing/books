@@ -1,8 +1,8 @@
-```
 spring JPA 扩展的关键注解为@NoRepositoryBean，如果不使用此注解进行标注，会出现如下异常：
-```
 
-Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: Path expected for join! \[select new com.my118.model.example.ExamEntity\(ex1.id,ex1.content,ex1.type,ex2.note\) from com.my118.model.example.Example1Entity ex1 left join Example2Entity ex2 on ex1.type=ex2.typeid where ex1.type='5'\]
+```
+Caused by: org.hibernate.hql.internal.ast.QuerySyntaxException: Path expected for join! [select new com.my118.model.example.ExamEntity(ex1.id,ex1.content,ex1.type,ex2.note) from com.my118.model.example.Example1Entity ex1 left join Example2Entity ex2 on ex1.type=ex2.typeid where ex1.type='5']
+```
 
 ```
 at org.hibernate.hql.internal.ast.QuerySyntaxException.convert\(QuerySyntaxException.java:74\) ~\[hibernate-core-5.0.11.Final.jar:5.0.11.Final\]
@@ -41,6 +41,14 @@ public List&lt;ExamEntity&gt; findComData\(@Param\("qType"\) String qType\);
 ```
 
 类注解为：
+
+```java
+//@NoRepositoryBean
+@Repository
+public interface Example1Dao extends JpaRepository<Example1Entity, Integer> {
+ @Query("select new com.my118.model.example.ExamEntity(ex1.id,ex1.content,ex1.type,ex2.note) from Example1Entity ex1, Example2Entity ex2 where ex1.type=ex2.typeid and ex1.type=:qType")
+    public List<ExamEntity> findComData(@Param("qType") String qType);
+```
 
 
 
