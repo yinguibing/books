@@ -1,0 +1,4 @@
+密码加密
+如何把字符串加密为MD5
+CredentialsMatcher
+HashedCredentialsMatcher设置加密算法即可
