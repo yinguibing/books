@@ -33,3 +33,19 @@ yum install rabbitmq-server-3.6.8-1.noarch.rpm
 
 命令：sudo chkconfig rabbitmq-server on
 
+5、启动页面管理
+
+sudo rabbitmq-plugins enable rabbitmq\_management
+
+6、启动服务器
+
+sudo service rabbitmq-server restart
+
+7、页面访问
+
+端口：15672  http://172.16.16.103:15672/
+
+
+
+
+
