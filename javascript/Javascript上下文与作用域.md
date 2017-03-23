@@ -95,13 +95,22 @@ var o = {
     return this.name
   }
 };
-o.getName();  // -> "o"  
+o.getName();  // -> "o"
 ```
 
 由于执行o.getName\(\)时getName所绑定的this是调用它的o，所以此时this == o；更容易搞混的是在closure条件下：
 
-```
-
+```js
+var name = "global";  
+var oo = {  
+  name: "oo",
+  getNameFunc: function(){
+    return function(){
+      return this.name;
+    };
+  }
+}
+oo.getNameFunc()();  // -> "global"  
 ```
 
 此时闭包函数被return后调用相当于：
