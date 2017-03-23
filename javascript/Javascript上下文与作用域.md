@@ -54,15 +54,31 @@ function c(){
 a();  // -> "a's x"  
 c();  // -> ReferenceError: y is not defined  
 x     // -> "global"  
-y     // -> ReferenceError: y is not defined  
+y     // -> ReferenceError: y is not defined
 ```
 
 **Closure**
 
 如果理解了上文中提到的上下文与作用域链的机制，再来看闭包的概念就很清楚了。每个function在调用时会创建新的上下文及作用域链，而作用域链就是将外层（上层）上下文所绑定的变量对象逐一串连起来，使当前function可以获取外层上下文的变量、数据等。如果我们在function中定义新的function，同时将内层function作为值返回，那么内层function所包含的作用域链将会一起返回，即使内层function在其他上下文中执行，其内部的作用域链仍然保持着原有的数据，而当前的上下文可能无法获取原先外层function中的数据，使得function内部的作用域链被保护起来，从而形成“闭包”。看下面的例子：
 
-```
-
+```js
+var x = 100;  
+var inc = function(){  
+  var x = 0;
+  return function(){
+    console.log(x++);
+  };
+};
+ 
+var inc1 = inc();  
+var inc2 = inc();
+ 
+inc1();  // -> 0  
+inc1();  // -> 1  
+inc2();  // -> 0  
+inc1();  // -> 2  
+inc2();  // -> 1  
+x;       // -> 100 
 ```
 
 执行过程如下图所示，inc内部返回的匿名function在创建时生成的作用域链包括了inc中的x，即使后来赋值给inc1和inc2之后，直接在global context下调用，它们的作用域链仍然是由定义中所处的上下文环境决定，而且由于x是在function inc中定义的，无法被外层的global context所改变，从而实现了闭包的效果：
