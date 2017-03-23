@@ -16,16 +16,16 @@ var f = function(){
   console.log(this.x);
 }
 f();  // -> 1
- 
+
 var ff = function(){  
   this.x = 2;
   console.log(this.x);
 }
 ff(); // -> 2  
 x     // -> 2
- 
+
 var o = {x: "o's x", f: f};  
-o.f(); // "o's x" 
+o.f(); // "o's x"
 ```
 
 **Scope chain**
@@ -34,8 +34,27 @@ o.f(); // "o's x"
 
 ![](http://mmbiz.qpic.cn/mmbiz_jpg/btsCOHx9LAMmWlcRC0IHTprgZqWw09r9SINRgKZCK2TgL1TFksBibqPWro2cBVYAmq6x4Oe5MvDGWE7KicQI1VFw/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1)
 
-```
-
+```js
+var x = 'global';  
+function a(){  
+  var x = "a's x";
+  function b(){
+    var y = "b's y";
+    console.log(x);
+  };
+  b();
+}
+function c(){  
+  var x = "c's x";
+  function d(){
+    console.log(y);
+  };
+  d();
+}
+a();  // -> "a's x"  
+c();  // -> ReferenceError: y is not defined  
+x     // -> "global"  
+y     // -> ReferenceError: y is not defined  
 ```
 
 **Closure**
