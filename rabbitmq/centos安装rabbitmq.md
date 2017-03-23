@@ -27,7 +27,9 @@ yum install rabbitmq-server-3.6.8-1.noarch.rpm
 
 最终方式是从官网下载rpm安装包进行安装：
 
-执行命令：sudo yum install rabbitmq-server-3.6.8-1.el7.noarch.rpm 
+执行命令：sudo yum install rabbitmq-server-3.6.8-1.el7.noarch.rpm
 
-![](/assets/rabbitmq install.png)
+![](/assets/rabbitmq install.png)**4、配置开机启动**
+
+
 
