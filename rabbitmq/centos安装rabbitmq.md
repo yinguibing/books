@@ -16,14 +16,12 @@ sudo yum install erlang
 
 ![](/assets/install erlang.png)
 
-3、安装rabbitmq
+**3、安装rabbitmq**
 
 ```
 rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
 yum install rabbitmq-server-3.6.8-1.noarch.rpm
 ```
-
-
 
 
 
