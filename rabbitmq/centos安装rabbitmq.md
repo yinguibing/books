@@ -31,5 +31,5 @@ yum install rabbitmq-server-3.6.8-1.noarch.rpm
 
 ![](/assets/rabbitmq install.png)**4、配置开机启动**
 
-
+命令：sudo chkconfig rabbitmq-server on
 
