@@ -110,31 +110,56 @@ var oo = {
     };
   }
 }
-oo.getNameFunc()();  // -> "global"  
+oo.getNameFunc()();  // -> "global"
 ```
 
 此时闭包函数被return后调用相当于：
 
-```
-
+```js
+getName = oo.getNameFunc();  
+getName();  // -> "global"  
 ```
 
 换一个更明显的例子：
 
-```
-
+```js
+var ooo = {  
+  name: "ooo",
+  getName: oo.getNameFunc() // 此时闭包函数的this被绑定到新的Object
+};
+ooo.getName();  // -> "ooo"  
 ```
 
 当然，有时候为了避免闭包中的this在执行时被替换，可以采取下面的方法：
 
-```
-
+```js
+var name = "global";  
+var oooo = {  
+  name: "ox4",
+  getNameFunc: function(){
+    var self = this;
+    return function(){
+       return self.name;
+    };
+  }
+};
+oooo.getNameFunc()(); // -> "ox4"  
 ```
 
 或者是在调用时强行定义执行的Object：
 
-```
-
+```js
+var name = "global";  
+var oo = {  
+  name: "oo",
+  getNameFunc: function(){
+    return function(){
+      return this.name;
+    };
+  }
+}
+oo.getNameFunc()();  // -> "global"  
+oo.getNameFunc().bind(oo)(); // -> "oo"  
 ```
 
 **总结**
