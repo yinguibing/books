@@ -23,5 +23,11 @@ rpm --import https://www.rabbitmq.com/rabbitmq-release-signing-key.asc
 yum install rabbitmq-server-3.6.8-1.noarch.rpm
 ```
 
+这种方式安装失败，提示no availbale package!
 
+最终方式是从官网下载rpm安装包进行安装：
+
+执行命令：sudo yum install rabbitmq-server-3.6.8-1.el7.noarch.rpm 
+
+![](/assets/rabbitmq install.png)
 
