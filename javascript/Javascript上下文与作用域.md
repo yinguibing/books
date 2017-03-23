@@ -69,16 +69,16 @@ var inc = function(){
     console.log(x++);
   };
 };
- 
+
 var inc1 = inc();  
 var inc2 = inc();
- 
+
 inc1();  // -> 0  
 inc1();  // -> 1  
 inc2();  // -> 0  
 inc1();  // -> 2  
 inc2();  // -> 1  
-x;       // -> 100 
+x;       // -> 100
 ```
 
 执行过程如下图所示，inc内部返回的匿名function在创建时生成的作用域链包括了inc中的x，即使后来赋值给inc1和inc2之后，直接在global context下调用，它们的作用域链仍然是由定义中所处的上下文环境决定，而且由于x是在function inc中定义的，无法被外层的global context所改变，从而实现了闭包的效果：
@@ -87,8 +87,15 @@ x;       // -> 100
 
 我们已经反复提到执行上下文和作用域实际上是通过function创建、分割的，而function中的this与作用域链不同，它是由执行该function时当前所处的Object环境所决定的，这也是this最容易被混淆用错的一点。一般情况下的例子如下：
 
-```
-
+```js
+var name = "global";  
+var o = {  
+  name: "o",
+  getName: function(){
+    return this.name
+  }
+};
+o.getName();  // -> "o"  
 ```
 
 由于执行o.getName\(\)时getName所绑定的this是调用它的o，所以此时this == o；更容易搞混的是在closure条件下：
